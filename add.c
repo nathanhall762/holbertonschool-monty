@@ -1,9 +1,9 @@
 #include "monty.h"
 
 /**
- * add - 
- * @stack:
- * @line_cnt:
+ * add - adds first two nodes of a stack
+ * @stack: stack given
+ * @line_cnt: line counter
  *
  * Return: void
  */
