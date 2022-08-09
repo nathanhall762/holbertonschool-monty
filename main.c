@@ -12,5 +12,11 @@ int main(int argc, char **argv)
 		/* set opcode to first token of strtok */
 		/* set argument to second token of strtok */
 		/* do the thing - execute_opcode */
+
 	/* free line */
+
+	/* free stack */
+
+	/* close file - fdclose */
+	/* exit */
 }
