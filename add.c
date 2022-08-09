@@ -1,4 +1,4 @@
-#include "monty.h"
+#include "header.h"
 
 /**
  * add - adds first two nodes of a stack
