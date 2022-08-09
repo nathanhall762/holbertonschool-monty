@@ -36,6 +36,18 @@ typedef struct instruction_s
         void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
+/**
+ * struct arg - argument for the current opcode
+ * @argument: the arguments of the string
+ *
+ * Description: global structure used to pass data around the functions easily
+ */
+typedef struct arg
+{
+	char *argument;
+} arg;
+arg Arg;
+
 /* Function Prototypes */
 void execute_opcode(char *opcode, stack_t **stack, unsigned int line_number);
 void push(stack_t **stack, unsigned int line_number);
