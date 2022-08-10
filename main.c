@@ -2,7 +2,6 @@
 
 int main(int argc, char **argv)
 {
-	/* declare variables */
 	FILE *fd;
 	char *line = NULL;
 	size_t size = 0;
@@ -13,48 +12,37 @@ int main(int argc, char **argv)
 
 	STACK = NULL;
 
-	/* open file */
-	fd = fopen(argv[1], "r");
+	fd = fopen(argv[1], "r"); /* open file */
 
-	/* error if cannot open file - maybe using fprintf */
-	if (!fd)
+	if (!fd) /* error if cannot open file - maybe using fprintf */
 	{
 		fprintf(stderr, "Error: Can't open file\n");
 		exit(EXIT_FAILURE);
 	}
 
-
-	/* read each line of function in a loop while tracking line number for error purposes */
-	while ((getline(&line, &size, fd)) != (-1))
+	while ((getline(&line, &size, fd)) != (-1)) /* read each line */
 	{
-		/* check for blank line */
-		if (*line == '\n')
+		if (*line == '\n') /* check for blank line */
 		{
 			line_number++;
 			continue;
 		}
-		/* set opcode to first token of strtok */
-		opcode = strtok(line, " \t\n");
+		opcode = strtok(line, " \t\n"); /* set opcode to first token of strtok */
 
-		/* check for strtok fail */
-		if (!opcode)
+		if (!opcode) /* check for strtok fail */
 		{
 			line_number++;
 			continue;
 		}
-		/* set argument to second token of strtok */
 		Arg.argument = strtok(NULL, " \t\n");
 
-		/* do the thing - execute_opcode */
 		execute_opcode(opcode, &STACK, line_number);
 		line_number++;
 	}
 
-	/* free line */
-	free(line);
+	free(line); /* free line */
 
-	/* free stack */
-	if (STACK != NULL)
+	if (STACK != NULL) /* free stack */
 	{
 		while (STACK != NULL)
 		{
@@ -63,9 +51,8 @@ int main(int argc, char **argv)
 			free(temp);
 		}
 	}
-	/* close file */
-	fclose(fd);
+	
+	fclose(fd); /* close file */
 
-	/* exit */
-	exit(EXIT_SUCCESS);
+	exit(EXIT_SUCCESS); /* exit */
 }

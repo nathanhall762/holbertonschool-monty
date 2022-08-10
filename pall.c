@@ -10,7 +10,7 @@ void pall(stack_t **stack, unsigned int line_number)
 	int len = 0;
 
 	(void) line_number;
-	
+
 		while (*stack != NULL)
 		{
 			printf("%d\n", (*stack)->n);
