@@ -1,5 +1,5 @@
-#ifndef HEADER_H
-#define HEADER_H
+#ifndef MONTY_H
+#define MONTY_H
 
 /* Libraries */
 #include <stdio.h>
@@ -54,9 +54,7 @@ arg Arg;
 	{					\
 		{"push", push},			\
 		{"pall", pall},			\
-		{"pint", pint},			\
 		{"pop", pop},			\
-		{"swap", swap},			\
 		{"add", add},			\
 		{"nop", nop},			\
 		{NULL, NULL}			\

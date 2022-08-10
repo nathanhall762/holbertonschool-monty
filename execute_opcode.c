@@ -1,4 +1,4 @@
-#include "header.h"
+#include "monty.h"
 
 /**
  * execute_opcode - compare opcode to opcode array and call matching function

@@ -1,4 +1,4 @@
-#include "header.h"
+#include "monty.h"
 
 /**
  * pall - print stack_t.n from beginning to end of stack_t list
@@ -7,5 +7,14 @@
  */
 void pall(stack_t **stack, unsigned int line_number)
 {
+	int len = 0;
 
+	(void) line_number;
+	
+		while (*stack != NULL)
+		{
+			printf("%d\n", (*stack)->n);
+			++len;
+			*stack = (*stack)->next;
+		}
 }
