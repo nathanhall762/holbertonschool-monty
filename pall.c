@@ -8,13 +8,15 @@
 void pall(stack_t **stack, unsigned int line_number)
 {
 	int len = 0;
+	stack_t *temp;
 
+	temp = *stack;
 	(void) line_number;
 
-		while (*stack != NULL)
-		{
-			printf("%d\n", (*stack)->n);
-			++len;
-			*stack = (*stack)->next;
-		}
+	while (temp != NULL)
+	{
+		printf("%d\n", (temp)->n);
+		++len;
+		temp = (temp)->next;
+	}
 }
