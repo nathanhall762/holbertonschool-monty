@@ -57,7 +57,7 @@ int main(int argc, char **argv)
 			free(temp);
 		}
 	}
-	
+
 	fclose(fd); /* close file */
 
 	exit(EXIT_SUCCESS); /* exit */
