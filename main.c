@@ -1,5 +1,13 @@
 #include "monty.h"
 
+/**
+ * main - entry point
+ * @argc: argument count
+ * @argv: argument vector
+ *
+ * Return: exit SUCCESS on success, FAILURE on fail
+ */
+
 int main(int argc, char **argv)
 {
 	FILE *fd;
